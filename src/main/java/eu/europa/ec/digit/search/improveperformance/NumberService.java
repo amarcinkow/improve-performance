@@ -45,17 +45,16 @@ public class NumberService {
         
     	Integer result = null;
     	Set<Integer> dataElements = new HashSet<Integer>();
+
         for (int i = 0; i < data.size(); i++) {
         	int currentElement = data.get(i);
+
         	if (!dataElements.add(currentElement)) {
-        		// set contains already this value
         		if (result == null || currentElement < result) {
         			result = currentElement;
         		}
         	}
         }
-        
-//        throw new UnsupportedOperationException("Not implemented.");
         return result;
     }
 
